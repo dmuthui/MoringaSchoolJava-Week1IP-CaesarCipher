@@ -1,19 +1,39 @@
 package ke.co.Safaricom;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //Entry of the user inputs to encode or decode or quit/continue
+        Scanner userInputObject = new Scanner(System.in);
+        do {
+            System.out.println("Enter process for encoding(Enter e to encode)/decode(Enter d to decode)");
+            String process = userInputObject.nextLine();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            System.out.println("Enter message to encode or decode:");
+            String message = userInputObject.nextLine();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
-    }
-}
+            System.out.println("Enter shift key(Enter shift key between 0-25):");
+            int key = userInputObject.nextInt();
+
+            if (process.equalsIgnoreCase("e")){
+                System.out.println("Encoding data in progress...");
+                System.out.println("The Processed data for output is  =>  " );
+            } else if (process.equalsIgnoreCase("d")) {
+                System.out.println("Decoding data in progress...");
+                System.out.println("\nThe Processed data for output is  =>  " );
+            } else {
+                System.out.println("Invalid process entered");
+                continue;
+            }
+            System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+            String input = userInputObject.nextLine();
+
+            String nextStep = userInputObject.nextLine();
+            if (nextStep.startsWith("q")){
+                break;
+            }
+        } while(true);
+    }//main method ends
+}//App Class End
+
