@@ -1,5 +1,7 @@
 package ke.co.Safaricom;
 
+import ke.co.Safaricom.Decoding;
+import ke.co.Safaricom.Encoding;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

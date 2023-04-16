@@ -18,16 +18,16 @@ public class App {
 
             if (process.equalsIgnoreCase("e")){
                 System.out.println("Encoding data in progress...");
-                System.out.println("The Processed data for output is  =>  " );
+                System.out.println("The Processed data for output is:  =>  " );
                 String encodedMessage = Encoding.encode(message, key);
-                System.out.println("The Processed data for output is  =>  " + encodedMessage);
+                System.out.println("The Processed data for output is:  =>  " + encodedMessage);
             } else if (process.equalsIgnoreCase("d")) {
                 System.out.println("Decoding data in progress...");
-                System.out.println("\nThe Processed data for output is  =>  " );
+                System.out.println("\nThe Processed data for output is:  =>  " );
                 String decodedMessage = Decoding.decode(message, key);
-                System.out.println("\nThe Processed data for output is  =>  " + decodedMessage);
+                System.out.println("\nThe Processed data for output is:  =>  " + decodedMessage);
             } else {
-                System.out.println("Invalid process entered");
+                System.out.println("Invalid process entered,try once again!");
                 continue;
             }
             System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
