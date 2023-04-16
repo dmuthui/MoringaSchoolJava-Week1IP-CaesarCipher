@@ -11,14 +11,27 @@ public class App {
             String process = userInputObject.nextLine();
 
             System.out.println("Enter message to encode or decode:");
-            String message = userInputObject.nextLine();
 
             System.out.println("Enter shift key(Enter shift key between 0-25):");
             int key = userInputObject.nextInt();
+            //Logic to enter Shift key between 0 - 25
+            if (key < 0) {
+                System.out.println("Enter key greater than 0");
+                System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+                String input = userInputObject.nextLine();
+                String nextStep = userInputObject.nextLine();
+                continue;
+            }else
+            if (key > 25) {
+                System.out.println("Enter key less than 25");
+                System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+                String input = userInputObject.nextLine();
+                String nextStep = userInputObject.nextLine();
+                continue;
+            }else
 
             if (process.equalsIgnoreCase("e")){
                 System.out.println("Encoding data in progress...");
-                System.out.println("The Processed data for output is:  =>  " );
                 String encodedMessage = Encoding.encode(message, key);
                 System.out.println("The Processed data for output is:  =>  " + encodedMessage);
             } else if (process.equalsIgnoreCase("d")) {
@@ -32,7 +45,6 @@ public class App {
             }
             System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
             String input = userInputObject.nextLine();
-
             String nextStep = userInputObject.nextLine();
             if (nextStep.startsWith("q")){
                 break;
