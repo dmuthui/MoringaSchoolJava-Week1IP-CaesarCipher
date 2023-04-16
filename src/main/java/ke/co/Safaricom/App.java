@@ -45,7 +45,8 @@ public class App {
 
             System.out.println("Enter message to encode or decode:");
             String message = userInputObject.nextLine();
-                //Logic for entry of Shift key which validates that key entered is between 0-25
+            
+            //Logic for entry of Shift key which validates that key entered is between 0-25
             System.out.println("Enter shift key(Enter shift key between 0-25):");
             int key = userInputObject.nextInt();
                 //Logic to ensure Shift key between 0 - 25
