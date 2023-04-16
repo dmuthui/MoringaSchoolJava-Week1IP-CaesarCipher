@@ -43,14 +43,11 @@ public class App {
             System.out.println("Enter process for encoding(Enter e to encode)/decode(Enter d to decode)");
             String process = userInputObject.nextLine();
 
-
             System.out.println("Enter message to encode or decode:");
             String message = userInputObject.nextLine();
-            //Logic to validate message to Encode/decode entered is a string only without digits
-
                 //Logic for entry of Shift key which validates that key entered is between 0-25
-                System.out.println("Enter shift key(Enter shift key between 0-25):");
-                int key = userInputObject.nextInt();
+            System.out.println("Enter shift key(Enter shift key between 0-25):");
+            int key = userInputObject.nextInt();
                 //Logic to ensure Shift key between 0 - 25
                 if (key < 0) {
                     System.out.println("Enter key greater than 0");
@@ -80,10 +77,9 @@ public class App {
                 System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
                 String input = userInputObject.nextLine();
                 String nextStep = userInputObject.nextLine();
-                if (nextStep.startsWith("q")) {
-                    break;
-                }
-
-            } while (true);
-       } // App Class End
-    }//App Method ends
+                  if (nextStep.startsWith("q")) {
+                      break;
+                  }
+        } while (true);
+    } // App Method ends
+}//App Class ends
