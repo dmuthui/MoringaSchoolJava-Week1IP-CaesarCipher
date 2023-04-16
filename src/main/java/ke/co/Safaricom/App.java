@@ -24,6 +24,8 @@ public class App {
             } else if (process.equalsIgnoreCase("d")) {
                 System.out.println("Decoding data in progress...");
                 System.out.println("\nThe Processed data for output is  =>  " );
+                String decodedMessage = Decoding.decode(message, key);
+                System.out.println("\nThe Processed data for output is  =>  " + decodedMessage);
             } else {
                 System.out.println("Invalid process entered");
                 continue;
