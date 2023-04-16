@@ -7,6 +7,7 @@ public class App {
     public String getProcess() {
         return process;
     }
+
     // Method  - Setter for process
     public void setProcess(String process) {
         this.process = process;
@@ -32,57 +33,70 @@ public class App {
         this.key = key;
     }
 
-   private String process;
-   private String message;
-   private String key;
+    private String process;
+    private String message;
+    private String key;
+
     public static void main(String[] args) {
-        //Entry of the user inputs to encode or decode or quit/continue
+        //Entry of the user inputs (Encode/Decode,Message,Key and Output)to encode or decode or quit/continue
         Scanner userInputObject = new Scanner(System.in);
         do {
             System.out.println("Enter process for encoding(Enter e to encode)/decode(Enter d to decode)");
             String process = userInputObject.nextLine();
 
+
             System.out.println("Enter message to encode or decode:");
             String message = userInputObject.nextLine();
+            //Logic to validate message to Encode/decode entered is a string only without spaces or digits
+            if ((message != null) && (!message.equals("")) && (message.chars().allMatch(Character::isLetter))) {
 
-            System.out.println("Enter shift key(Enter shift key between 0-25):");
-            int key = userInputObject.nextInt();
-            //Logic to enter Shift key between 0 - 25
-            if (key < 0) {
-                System.out.println("Enter key greater than 0");
+                //Logic for entry of Shift key which validates that key entered is between 0-25
+                System.out.println("Enter shift key(Enter shift key between 0-25):");
+                int key = userInputObject.nextInt();
+                //Logic to ensure Shift key between 0 - 25
+                if (key < 0) {
+                    System.out.println("Enter key greater than 0");
+                    System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+                    String input = userInputObject.nextLine();
+                    String nextStep = userInputObject.nextLine();
+                    continue;
+                } else if (key > 25) {
+                    System.out.println("Enter Shift key less than 25");
+                    System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+                    String input = userInputObject.nextLine();
+                    String nextStep = userInputObject.nextLine();
+                    continue;
+                    //Logic to validate the Encode/Decode process entered(Whether E/e or D/d will executed.
+                } else if (process.equalsIgnoreCase("e")) {
+                    System.out.println("Encoding data in progress...");
+                    String encodedMessage = Encoding.encode(message, key);
+                    System.out.println("The Encoded data for output is:  =>  " + encodedMessage);
+                } else if (process.equalsIgnoreCase("d")) {
+                    System.out.println("Decoding data in progress...");
+                    String decodedMessage = Decoding.decode(message, key);
+                    System.out.println("\nThe Decoded data for output is:  =>  " + decodedMessage);
+                }else {
+                    System.out.println("Invalid process entered");
+                    continue;
+                      }
+                }else {
+                    System.out.println("Alert!!Wrong entry\nEnter a message to Encode or Decode without spaces/digits");
+                    System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
+                    String outs = userInputObject.nextLine();
+                    String nextSteps = userInputObject.nextLine();
+                    if (nextSteps.startsWith("q")) {
+                        break;
+                    }else {
+                        continue;
+                    }
+                }
                 System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
                 String input = userInputObject.nextLine();
                 String nextStep = userInputObject.nextLine();
-                continue;
-            }else
-            if (key > 25) {
-                System.out.println("Enter Shift key less than 25");
-                System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
-                String input = userInputObject.nextLine();
-                String nextStep = userInputObject.nextLine();
-                continue;
-            }else
+                if (nextStep.startsWith("q")) {
+                    break;
+                }
 
-            if (process.equalsIgnoreCase("e")){
-                System.out.println("Encoding data in progress...");
-                String encodedMessage = Encoding.encode(message, key);
-                System.out.println("The Processed data for output is:  =>  " + encodedMessage);
-            } else if (process.equalsIgnoreCase("d")) {
-                System.out.println("Decoding data in progress...");
-                System.out.println("\nThe Processed data for output is:  =>  " );
-                String decodedMessage = Decoding.decode(message, key);
-                System.out.println("\nThe Processed data for output is:  =>  " + decodedMessage);
-            } else {
-                System.out.println("Invalid process entered,try once again!");
-                continue;
-            }
-            System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
-            String input = userInputObject.nextLine();
-            String nextStep = userInputObject.nextLine();
-            if (nextStep.startsWith("q")){
-                break;
-            }
-        } while(true);
-    }//main method ends
-}//App Class End
-
+        } while (true);
+    } // App Class End
+}//App Method ends
