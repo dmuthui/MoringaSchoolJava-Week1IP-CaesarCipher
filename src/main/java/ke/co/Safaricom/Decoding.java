@@ -1,2 +1,4 @@
-package ke.co.Safaricom;public class Decoding {
+package ke.co.Safaricom;
+
+public class Decoding {
 }
