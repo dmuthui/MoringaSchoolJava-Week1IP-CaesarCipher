@@ -36,7 +36,6 @@ public class App {
     private String process;
     private String message;
     private String key;
-
     public static void main(String[] args) {
         //Entry of the user inputs (Encode/Decode,Message,Key and Output)to encode or decode or quit/continue
         Scanner userInputObject = new Scanner(System.in);
@@ -47,8 +46,7 @@ public class App {
 
             System.out.println("Enter message to encode or decode:");
             String message = userInputObject.nextLine();
-            //Logic to validate message to Encode/decode entered is a string only without spaces or digits
-            if ((message != null) && (!message.equals("")) && (message.chars().allMatch(Character::isLetter))) {
+            //Logic to validate message to Encode/decode entered is a string only without digits
 
                 //Logic for entry of Shift key which validates that key entered is between 0-25
                 System.out.println("Enter shift key(Enter shift key between 0-25):");
@@ -79,17 +77,6 @@ public class App {
                     System.out.println("Invalid process entered");
                     continue;
                       }
-                }else {
-                    System.out.println("Alert!!Wrong entry\nEnter a message to Encode or Decode without spaces/digits");
-                    System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
-                    String outs = userInputObject.nextLine();
-                    String nextSteps = userInputObject.nextLine();
-                    if (nextSteps.startsWith("q")) {
-                        break;
-                    }else {
-                        continue;
-                    }
-                }
                 System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
                 String input = userInputObject.nextLine();
                 String nextStep = userInputObject.nextLine();
@@ -97,6 +84,6 @@ public class App {
                     break;
                 }
 
-        } while (true);
-    } // App Class End
-}//App Method ends
+            } while (true);
+       } // App Class End
+    }//App Method ends
