@@ -19,6 +19,8 @@ public class App {
             if (process.equalsIgnoreCase("e")){
                 System.out.println("Encoding data in progress...");
                 System.out.println("The Processed data for output is  =>  " );
+                String encodedMessage = Encoding.encode(message, key);
+                System.out.println("The Processed data for output is  =>  " + encodedMessage);
             } else if (process.equalsIgnoreCase("d")) {
                 System.out.println("Decoding data in progress...");
                 System.out.println("\nThe Processed data for output is  =>  " );
