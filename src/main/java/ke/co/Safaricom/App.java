@@ -3,6 +3,38 @@ package ke.co.Safaricom;
 import java.util.Scanner;
 
 public class App {
+    // Method  - Getter for process
+    public String getProcess() {
+        return process;
+    }
+    // Method  - Setter for process
+    public void setProcess(String process) {
+        this.process = process;
+    }
+
+    // Method  - Getter for message
+    public String getMessage() {
+        return message;
+    }
+
+    // Method  - Setter for message
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    // Method  - Getter for key
+    public String getKey() {
+        return key;
+    }
+
+    // Method  - Setter for key
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+   private String process;
+   private String message;
+   private String key;
     public static void main(String[] args) {
         //Entry of the user inputs to encode or decode or quit/continue
         Scanner userInputObject = new Scanner(System.in);
@@ -11,6 +43,7 @@ public class App {
             String process = userInputObject.nextLine();
 
             System.out.println("Enter message to encode or decode:");
+            String message = userInputObject.nextLine();
 
             System.out.println("Enter shift key(Enter shift key between 0-25):");
             int key = userInputObject.nextInt();
@@ -23,7 +56,7 @@ public class App {
                 continue;
             }else
             if (key > 25) {
-                System.out.println("Enter key less than 25");
+                System.out.println("Enter Shift key less than 25");
                 System.out.println("\nDo you want to quit(Enter q) or continue(Enter c)");
                 String input = userInputObject.nextLine();
                 String nextStep = userInputObject.nextLine();
