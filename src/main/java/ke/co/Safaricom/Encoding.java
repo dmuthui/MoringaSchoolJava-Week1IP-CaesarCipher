@@ -15,12 +15,13 @@ public class Encoding {
                 int keyValue = (shiftKey + charPosition);
                 if (keyValue < 26 ) {
                     cipherText +=  alphabets.charAt(keyValue);
-                }
-                else
+
+                } else
                     cipherText += alphabets.charAt(keyValue % 26);
 
-            }
-            else
+            }else if (Character.isDigit(messageUnit)) {
+                int charPosition = alphabets.indexOf(messageUnit);
+            }else
                 cipherText += messageUnit;
 
         }

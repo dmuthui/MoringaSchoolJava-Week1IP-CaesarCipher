@@ -43,9 +43,10 @@ public class App {
             System.out.println("Enter process for encoding(Enter e to encode)/decode(Enter d to decode)");
             String process = userInputObject.nextLine();
 
-            System.out.println("Enter message to encode or decode:");
+            System.out.println("Enter message to encode or decode(No output for digits):");
             String message = userInputObject.nextLine();
-            
+
+
             //Logic for entry of Shift key which validates that key entered is between 0-25
             System.out.println("Enter shift key(Enter shift key between 0-25):");
             int key = userInputObject.nextInt();
