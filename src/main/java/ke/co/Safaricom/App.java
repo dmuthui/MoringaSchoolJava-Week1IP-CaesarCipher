@@ -37,7 +37,7 @@ public class App {
     private String message;
     private String key;
     public static void main(String[] args) {
-        //Entry of the user inputs (Encode/Decode,Message,Key and Output)to encode or decode or quit/continue
+        //Entry of the user inputs (Encode/Decode,Message,Shift Key,Output & quit/continue)
         Scanner userInputObject = new Scanner(System.in);
         do {
             System.out.println("Enter process for encoding(Enter e to encode)/decode(Enter d to decode)");
