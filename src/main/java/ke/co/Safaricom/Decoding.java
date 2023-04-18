@@ -20,8 +20,6 @@ public class Decoding {
                 else
                     decipherText += alphabets.charAt(keyValue % 26);
 
-            }else if (Character.isDigit(messageUnit)) {
-                int charPosition = alphabets.indexOf(messageUnit);
             }else
                 decipherText += messageUnit;
         }
