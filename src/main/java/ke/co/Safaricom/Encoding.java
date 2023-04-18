@@ -14,7 +14,7 @@ public class Encoding {
                 int charPosition = alphabets.indexOf(messageUnit);
                 int keyValue = (shiftKey + charPosition);
                 if (keyValue < 26 ) {
-                    cipherText +=  alphabets.charAt(keyValue);
+                    cipherText += alphabets.charAt(keyValue);
 
                 } else
                     cipherText += alphabets.charAt(keyValue % 26);

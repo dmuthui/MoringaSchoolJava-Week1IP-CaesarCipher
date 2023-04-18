@@ -3,6 +3,10 @@ package ke.co.Safaricom;
 import java.util.Scanner;
 
 public class App {
+    private String process;
+    private String message;
+    private String key;
+
     // Method  - Getter for process
     public String getProcess() {
         return process;
@@ -33,9 +37,7 @@ public class App {
         this.key = key;
     }
 
-    private String process;
-    private String message;
-    private String key;
+
     public static void main(String[] args) {
         //Entry of the user inputs (Encode/Decode,Message,Shift Key,Output & quit/continue)
         Scanner userInputObject = new Scanner(System.in);
@@ -45,7 +47,6 @@ public class App {
 
             System.out.println("Enter message to encode or decode(No output for digits):");
             String message = userInputObject.nextLine();
-
 
             //Logic for entry of Shift key which validates that key entered is between 0-25
             System.out.println("Enter shift key(Enter shift key between 0-25):");
