@@ -77,7 +77,7 @@ There are no known bugs on this project.
 •   Used the IntelliJ IDEA as code editor for compiling and running the source code.
 
 ## Support and contact details
-If you need any assistance on any issues or have questions, ideas or concerns. Kindly contact me through email: dopiyo@gmail.com to make a contribution to the code or for any assistance on the app/project.
+If you need any assistance on any issues or have questions, ideas or concerns. Kindly contact me through email: vyda2002us@gmail.com to make a contribution to the code or for any assistance on the app/project.
 
 ## Github URL Link
 To be able to view the project click on https://dmuthui.github.io/MoringaSchoolJava-Week1IP-CaesarCipher/
