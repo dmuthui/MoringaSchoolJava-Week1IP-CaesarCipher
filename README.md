@@ -80,7 +80,7 @@ There are no known bugs on this project.
 If you need any assistance on any issues or have questions, ideas or concerns. Kindly contact me through email: vyda2002us@gmail.com to make a contribution to the code or for any assistance on the app/project.
 
 ## Github URL Link
-To be able to view the project click on https://dmuthui.github.io/MoringaSchoolJava-Week1IP-CaesarCipher/
+To be able to view the project click on [https://dmuthui.github.io/MoringaSchoolJava-Week1IP-CaesarCipher/](https://github.com/dmuthui/MoringaSchoolJava-Week1IP-CaesarCipher.git)
 
 ### License
 _The License used is GPL_
